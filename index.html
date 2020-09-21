@@ -27,22 +27,22 @@
                 <h4 id="user_title" style="align-self: flex-start;">Password</h4>
                 <input type="password" id="password" style="width: 100px;">
             </div>
-            <script>
-                var password = document.getElementById("password")
-                var username = document.getElementById("username")
-                function saveData(){
-                    if (localStorage.getItem("username") == undefined){
-                        localStorage.setItem("username", username.value)
-                        localStorage.setItem("password", password.value)
-                        document.getElementsByClassName("auth").remove
-                    }
-                    else{
-                        document.getElementsByClassName("auth").remove
-                    }
-                    authaccount = [username.value, password.value]
-                }
-                </script>
-            <input type="button" value="Save" onclick="saveData()">
         </div>
+        <script>
+            var password = document.getElementById("password")
+            var username = document.getElementById("username")
+            function saveData(){
+                if (localStorage.getItem("username") == undefined){
+                    localStorage.setItem("username", username.value)
+                    localStorage.setItem("password", password.value)
+                    document.getElementsByClassName("auth").remove
+                }
+                else{
+                    document.getElementsByClassName("auth").remove
+                }
+                authaccount = [username.value, password.value]
+            }
+            </script>
+        <input type="button" value="Save" onclick="saveData()">
     </body>
 </html>

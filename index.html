@@ -32,8 +32,15 @@
                 var password = document.getElementById("password")
                 var username = document.getElementById("username")
                 function saveData(){
-                    localStorage.setItem("username", username.value)
-                    localStorage.setItem("password", password.value)
+                    if (localStorage.getItem("username") == null){
+                        localStorage.setItem("username", username.value)
+                        localStorage.setItem("password", password.value)
+                        document.getElementsByClassName("auth").remove
+                    }
+                    else{
+                        document.getElementsByClassName("auth").remove
+                    }
+                    authaccount = [username.value, password.value]
                 }
                 </script>
             <input type="button" value="Save" onclick="saveData()">

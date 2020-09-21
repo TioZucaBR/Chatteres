@@ -32,7 +32,7 @@
                 var password = document.getElementById("password")
                 var username = document.getElementById("username")
                 function saveData(){
-                    if (localStorage.getItem("username") == null){
+                    if (localStorage.getItem("username") == undefined){
                         localStorage.setItem("username", username.value)
                         localStorage.setItem("password", password.value)
                         document.getElementsByClassName("auth").remove

@@ -15,6 +15,8 @@
                 border: 2px solid rgb(151, 151, 151);
                 outline: none;
                 border-radius: 12px;
+                align-self: center;
+                text-align: center
             }
             .saveAccountButton:hover {
                 background-color: grey;
@@ -36,21 +38,7 @@
                 <input type="password" id="password" style="width: 100px;">
             </div>
         </div>
-        <script>
-            var password = document.getElementById("password")
-            var username = document.getElementById("username")
-            function saveData(){
-                if (sessionStorage.getItem("username") == undefined){
-                    sessionStorage.setItem("username", username.value)
-                    sessionStorage.setItem("password", password.value)
-                    document.getElementsByClassName("auth").remove
-                }
-                else{
-                    document.getElementsByClassName("auth").remove
-                }
-                authaccount = [username.value, password.value]
-            }
-        </script>
+        <script src="saveData.js"></script>
         <input type="button" value="Register" class="saveAccountButton" onclick="saveData()">
     </body>
 </html>
